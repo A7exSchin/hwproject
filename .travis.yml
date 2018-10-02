@@ -1,9 +1,13 @@
 sudo: required
 
-language: java
-
 services:
  - docker
 
-before_install:
- - docker build -t ecanyon/hwproject-alpine --file ./Dockerfile-alpine.txt . 
+jobs:
+ include:
+  - stage: build docker image
+    script:
+     - docker build -t ecanyon/hwproject-alpine --file ./Dockerfile-alpine.txt . 
+     - docker images ls
+  - stage: test
+    script: docker run --rm ecanyon/hwproject-alpine
