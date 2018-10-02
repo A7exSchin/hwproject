@@ -9,5 +9,3 @@ jobs:
     script:
      - docker build -t ecanyon/hwproject-alpine --file ./Dockerfile-alpine.txt . 
      - docker images ls
-  - stage: test
-    script: docker run --rm ecanyon/hwproject-alpine
