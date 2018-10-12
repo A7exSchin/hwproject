@@ -1,1 +1,1 @@
-https://travis-ci.org/TheECanyon/hwproject.svg?branch=master
+[Build](https://travis-ci.org/TheECanyon/hwproject.svg?branch=master)
